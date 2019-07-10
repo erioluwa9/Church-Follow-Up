@@ -1,0 +1,78 @@
+body{
+    background-color: #faf8f8;
+}
+.blog-header {
+    line-height: 1;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  
+ 
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  }
+  .form{
+      background-color: rgb(247, 244, 244) !important;
+      padding: 10px;
+      border-radius: 9px;
+  }
+
+  .hoov{
+    cursor: pointer !important;
+    padding: 7px !important;
+    width: 100% !important;
+  }
+
+  .hoov:hover{
+    background-color: #e0dfdf;
+  }
+
+  .jumbotron{
+     background-color: #D7C49EFF !important; 
+     color: #343148FF !important;
+  }
+
+  .thead{
+    background-color: #343148FF !important; 
+    color: #D7C49EFF !important;
+  }
+
+  .special-btn{
+    background-color: #343148FF !important; 
+    color: #D7C49EFF !important;
+  }
+
+  .special-btn:hover{
+    background-color: #D7C49EFF !important; 
+    color: #343148FF !important;
+  }
+
+  .nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 6.3rem;
+    overflow-y: hidden;
+  }
+  
+  .Welcome, .Welcome:hover {
+      cursor: default !important; 
+  }
+
+  .table td, .table th {
+    border: none;
+}
+
+.feedback{
+  height: 15em !important;
+}
+
+/* table.table.table-condensed {
+    border: 1px solid black;
+} */
+  
+  /* .height{
+      margin-top: 300px;
+      height: 4000px !important;
+  }
+  */
+
+ 

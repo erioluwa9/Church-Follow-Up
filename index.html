@@ -1,0 +1,328 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Church Follow Up System</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="file:///C:/Users/User/Desktop/full-stack-program-folder/tools/fontawesome-free-5.8.0-web/fontawesome-free-5.8.0-web/css/all.css">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css" integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y" crossorigin="anonymous"> -->
+    <!-- <link href="/fontawesome-free-5.8.0-web/css/all.css" rel="stylesheet"> -->
+  </head>
+
+    <body>
+        <div class="container">
+            <header class="blog-header py-3">
+                <div class="row flex-nowrap justify-content-between align-items-center">
+                <div class="col-4 pt-1">
+                    <a class="text-muted" href="#">About</a>
+                </div>
+                <div class="col-4 text-center">
+                    <h2 class="blog-header-logo text-dark" href="#">Church Follow Up</h2>
+                </div>
+                <div class="col-4 d-flex justify-content-end align-items-center">
+                    <a class="btn btn-sm text-muted Welcome" href="#">Welcome, Erioluwa!</a>
+                </div>
+                </div>
+            </header>
+        
+
+            <div class="nav-scroller py-1 mb-2">
+                <nav class="nav d-flex justify-content-between">
+
+                    <div class="col-md-2">
+                        <div class="dropdown create">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                Add Messages
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li><a data-toggle="modal" data-target="#addPage" class="btn btn-default hoov">Add Calls</a></li>
+                                <li><a data-toggle="modal" data-target="#addPost" class="btn btn-default hoov">Add Message</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a class="btn btn-sm btn-outline-secondary" href="#myForm1">Add Member</a>
+                </nav>
+            </div>
+
+            <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
+                <div class="col-md-8 px-0">
+                    <h1 class="display-4 font-italic">Only authorized personels are allowed to use this system</h1>
+                    <p class="lead my-3">In case you have any trouble with this system, do well to contact the head of the folllow up unit.</p>
+                    <p class="lead mb-0"><a href="contact.html" class="text-white font-weight-bold">Contact Admin please...</a></p>
+                </div>
+            </div>
+            <br>
+            <hr>
+            <h3 class="text-muted text-dark">New Members Table</h3>
+            <div class="row">
+                <div class="col-md-8">
+                    <table id="tested" class="table table-hover table-striped table-responsive table-responsive-sm table-responsive-md table-responsive-lg table-responsive-xl table-condensed">
+                        <thead class="thead">
+                            <tr>
+                                <th class="text-center" scope="col">Full Name</th>
+                                <th class="text-center" scope="col">Email</th>
+                                <th class="text-center" scope="col">Phone Number</th>
+                                <th class="text-center" scope="col">Address</th>
+                                <th class="text-center" scope="col">Delete</th>
+                            </tr>
+                        </thead>
+                         <tbody>
+                            <tr>
+                                <td>Stephen Ojuolape Deborah</td>
+                                <td>jumbotron22@gmail.com</td>
+                                <td>08120357688</td>
+                                <td>453 mosaku str, off eniyanloonbinu road, Oshodi Enugu 10026</td>
+                                <td><button onclick="deleteRow1(this)" type="button" class="btn btn-danger btn-xs"><i class="fas fa-trash-alt"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td>Ibrahim Jumoh</td>
+                                <td>Ibrahim95@gmail.com</td>
+                                <td>07056443225</td>
+                                <td>453 iseyin str, off mosaku road, Isolo Abia 13606</td>
+                                <td><button onclick="deleteRow1(this)" type="button" class="btn btn-danger btn-xs"><i class="fas fa-trash-alt"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td>Martin nneegbedu</td>
+                                <td>martin5@yahoo.com</td>
+                                <td>08024848576</td>
+                                <td>357 , off mosaarowojobe str, Oja road, Ojota Ogun 11233</td>
+                                <td><button onclick="deleteRow1(this)" type="button" class="btn btn-danger btn-xs"><i class="fas fa-trash-alt"></i></button></td>
+                            </tr>
+                        </tbody> 
+                    </table>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel panel-secondary">
+                        <div class="panel-body">
+                            <form id="myForm1" class="form">
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="inputFullName">FullName</label>
+                                        <input required type="name" class="form-control" id="inputFullName" placeholder="FullName">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="inputEmail">Email</label>
+                                        <input required type="email" class="form-control" id="inputEmail" placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPhone">Phone Number</label>
+                                    <input required type="number" class="form-control" id="inputPhone" placeholder="08130136855">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputAddress">Address</label>
+                                    <input required type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputAddress2">Address 2</label>
+                                    <input required type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="inputCity">City</label>
+                                        <input required type="text" class="form-control" id="inputCity">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="inputState">State</label>
+                                        <select id="inputState" class="form-control">
+                                            <option selected disabled>Choose...</option>
+                                            <option>Enugu</option>
+                                            <option>Lagos</option>
+                                            <option>Jigawa</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <button id="submit" type="submit" class="btn col-md-12 special-btn">Add Member</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div><br><br><br>
+            <hr>
+            <h3 class="text-center text-muted text-dark">Message Table</h3>
+            <div class="row">
+                <div class="col-md-12">
+                    <table id="tableTwo" class="table table-hover table-striped table-responsive table-responsive-sm table-responsive-md table-responsive-lg table-responsive-xl table-condensed">
+                        <thead class="thead">
+                            <tr>
+                                <th class="text-center" scope="col">Title</th>
+                                <th class="text-center" scope="col">Date/Time</th>
+                                <th class="text-center" scope="col">Message Body</th>
+                                <th class="text-center" scope="col">Type</th>
+                                <th class="text-center" scope="col">Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Rose of Sharon Church</td>
+                                <td>12/03/19 12:34 pm</td>
+                                <td>We really want to use this mmedium to appriciate you for taking out time, out of your busy Schedule, to attend our Church. God Bless You!!!</td>
+                                <td>email</td>
+                                <td><button onclick="deleteRow2(this)" type="button" class="btn btn-danger btn-xs"><i class="fas fa-trash-alt"></i></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                </div><br><br>
+                <hr>
+                <h3 class="text-center text-muted text-dark">Phone Call Table</h3>
+                <div class="row">
+                <div class="col-md-8 offset-2">
+                    <table id="tableThree" class="table table-hover table-striped table-responsive table-responsive-sm table-responsive-md table-responsive-lg table-responsive-xl table-condensed">
+                        <thead class="thead">
+                            <tr>
+                                <th class="text-center" scope="col">Recipient</th>
+                                <th class="text-center" scope="col">Recorded Call</th>
+                                <th class="text-center" scope="col">Phone Number</th>
+                                <th class="text-center" scope="col">Move-Out Date</th>
+                                <th class="text-center" scope="col">Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Stephen Job</td>
+                                <td>/music/cul/callRecord4.mp3</td>
+                                <td>08130136855</td>
+                                <td>20/11/12 12:34 am</td>
+                                <td><button onclick="deleteRow3(this)" type="button" class="btn btn-danger btn-xs"><i class="fas fa-trash-alt"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td>Mark Zukerburg</td>
+                                <td>/music/callRecord1.mp3</td>
+                                <td>08130124955</td>
+                                <td>12/01/19 1:35 pm</td>
+                                <td><button onclick="deleteRow3(this)" type="button" class="btn btn-danger btn-xs"><i class="fas fa-trash-alt"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td>Micheal Akingbala</td>
+                                <td>/music/gospel/callRecord1.mp3</td>
+                                <td>08130136855</td>
+                                <td>23/05/16 09:50 am</td>
+                                <td><button onclick="deleteRow3(this)" type="button" class="btn btn-danger btn-xs"><i class="fas fa-trash-alt"></i></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br>
+
+        
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+
+
+
+
+ <!-- Modals -->
+
+    <!-- Add page Modal -->
+    <div class="modal fade" id="addPage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                
+                <form id="myForm3" action="">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">Add Calls</h4>
+                </div>
+                <div class="modal-body">
+                  <div class="form-group">
+                    <label>Recipient name</label>
+                    <input required id="inputRecipientName" class="form-control" type="text" name="" placeholder="Recipient name">
+                  </div>
+                  <div class="form-group">
+                    <label>Insert Recorded Call from Drive!</label>
+                    <input required class="form-control" id="inputRecordedCall" type="file">
+                  </div>
+      
+                  <div class="form-group">
+                    <label>Phone Number</label><br>
+                    <input required id="inputRecipientNumber" type="number" class="form-control" placeholder="Recipient Number">
+                  </div>
+
+                  <div class="form-group">
+                    <label>Date and Time to move Out</label><br>
+                    <input required id="inputDateTime" type="date" class="datepicker btn btn-default">
+                  </div>
+      
+                </div>
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-primary">Save changes</button>
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          
+      
+          <!-- Add post Modal -->
+          <div class="modal fade" id="addPost" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                
+                <form id="myForm2">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">Add Message</h4>
+                </div>
+                <div class="modal-body">
+                  <div class="form-group">
+                      <label>Message Title</label>
+                    <input class="form-control" type="text" id="inputMessageTitle" placeholder="Message Title" required>
+                  </div>
+      
+                  <div class="form-group">
+                    <label>Date and Time to move Out</label><br>
+                    <input type="date" class="datepicker btn btn-default" required>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label>Message Body</label>
+                    <textarea class="form-control"  id="inputMessageBody" placeholder="Enter cotent of Message here..." required></textarea> 
+                  </div>
+
+                  <div class="form-group">
+                        <label for="inputSendType">Sending Type</label>
+                        <select id="inputSendType" class="form-control">
+                            <option selected disabled>Choose...</option>
+                            <option>SMS</option>
+                            <option>Email</option>
+                            <option>Both (SMS and Email)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-primary">Save changes</button>
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+                </form>
+              </div>
+            </div>
+          </div>
+      
+          
+
+        <script src="./jquery/jquery-3.3.1.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="./js/main.js"></script>
+    </body>
+</html>
